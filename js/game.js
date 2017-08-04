@@ -4,7 +4,10 @@ function preload() {
 
     game.load.image('pawn', '/img/chess_piece_white_pawn_T.png');
     game.load.image('rook', '/img/chess_piece_white_rook_T.png');
-    
+    game.load.image('bishop', '/img/chess_piece_white_bishop_T.png');
+    game.load.image('queen', '/img/chess_piece_white_queen_T.png');
+    game.load.image('king', '/img/chess_piece_white_king_T.png');
+    game.load.image('knight', '/img/chess_piece_white_knight_T.png');
 }
 
 function create() {
