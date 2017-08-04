@@ -1,36 +1,23 @@
-var game = new Phaser.Game(800, 600, Phaser.AUTO, 'phaser-example', { preload: preload, create: create, update: update, render: render });
+var game = new Phaser.Game(600, 600, Phaser.CANVAS, 'phaser-example', { preload: preload, create: create });
 
 function preload() {
-    game.load.image('arrow', 'assets/sprites/arrow.png');
-}
 
-var sprite;
+    game.load.atlas('seacreatures', 'assets/sprites/seacreatures_json.png', 'assets/sprites/seacreatures_json.json');
+    
+}
 
 function create() {
 
-    game.physics.startSystem(Phaser.Physics.ARCADE);
+    //  This is just a visual debug grid, it's not needed for the actual Group.align to work
+    game.add.sprite(0, 0, game.create.grid('grid', 160 * 4, 160 * 4, 75, 75, 'rgb(255,255,255)'));
 
-    game.stage.backgroundColor = '#0072bc';
+    var group = game.add.group();
 
-    sprite = game.add.sprite(400, 300, 'arrow');
-    sprite.anchor.setTo(0.5, 0.5);
+    
 
-    //  Enable Arcade Physics for the sprite
-    game.physics.enable(sprite, Phaser.Physics.ARCADE);
-
-    //  Tell it we don't want physics to manage the rotation
-    sprite.body.allowRotation = false;
-
-}
-
-function update() {
-
-    sprite.rotation = game.physics.arcade.moveToPointer(sprite, 60, game.input.activePointer, 500);
-
-}
-
-function render() {
-
-    game.debug.spriteInfo(sprite, 32, 32);
+    //  Try changing the position constant to see the difference:
+    group.align(5, 3, 160, 160, Phaser.CENTER);
+    // group.align(5, 3, 160, 160, Phaser.TOP_RIGHT);
+    // group.align(5, 3, 160, 160, Phaser.BOTTOM_LEFT);
 
 }
