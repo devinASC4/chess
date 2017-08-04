@@ -4,15 +4,10 @@ function preload() {
 
     game.load.image('pawn', '/img/chess_piece_white_pawn_T.png');
     game.load.image('rook', '/img/chess_piece_white_rook_T.png');
-<<<<<<< HEAD
-    game.load.image('knight', '/img/chess_piece_white_knight_T.png');
-    
-=======
     game.load.image('bishop', '/img/chess_piece_white_bishop_T.png');
     game.load.image('queen', '/img/chess_piece_white_queen_T.png');
     game.load.image('king', '/img/chess_piece_white_king_T.png');
     game.load.image('knight', '/img/chess_piece_white_knight_T.png');
->>>>>>> 3953cd8673ed02b68c50d18cfd80e87cbfc0fb3e
 }
 
 function create() {
@@ -62,6 +57,30 @@ function create() {
         knight.scale.setTo(0.15, 0.15);
         knight = game.add.sprite(75, 525, 'knight');
         knight.scale.setTo(0.15,0.15);
+
+    //Adding Initial Bishops
+        var bishop = game.add.sprite(150, 0, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(375, 0, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(150, 525, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(375, 525, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+    //Adding Initial King
+        var bishop = game.add.sprite(300, 0, 'king');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(300, 525, 'king');
+        bishop.scale.setTo(0.15,0.15);
+    //Adding Initial Queen
+        var bishop = game.add.sprite(225, 0, 'queen');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(225, 525, 'queen');
+        bishop.scale.setTo(0.15,0.15);
+        
+
+
+    
     
 
 }
