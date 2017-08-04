@@ -47,6 +47,40 @@ function create() {
         rook = game.add.sprite(k*525, 525, 'rook');
         rook.scale.setTo(0.15,0.15);
     }
+
+    //Adding Initial Knights
+        var knight = game.add.sprite(450, 0, 'knight');
+        knight.scale.setTo(0.15,0.15);
+        knight = game.add.sprite(75, 0, 'knight');
+        knight.scale.setTo(0.15,0.15);
+        knight = game.add.sprite(450, 525, 'knight');
+        knight.scale.setTo(0.15, 0.15);
+        knight = game.add.sprite(75, 525, 'knight');
+        knight.scale.setTo(0.15,0.15);
+
+    //Adding Initial Bishops
+        var bishop = game.add.sprite(150, 0, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(375, 0, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(150, 525, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(375, 525, 'bishop');
+        bishop.scale.setTo(0.15,0.15);
+    //Adding Initial King
+        var bishop = game.add.sprite(300, 0, 'king');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(300, 525, 'king');
+        bishop.scale.setTo(0.15,0.15);
+    //Adding Initial Queen
+        var bishop = game.add.sprite(225, 0, 'queen');
+        bishop.scale.setTo(0.15,0.15);
+        var bishop = game.add.sprite(225, 525, 'queen');
+        bishop.scale.setTo(0.15,0.15);
+        
+
+
+    
     
 
 }
