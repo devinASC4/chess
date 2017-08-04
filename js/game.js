@@ -4,6 +4,7 @@ function preload() {
 
     game.load.image('pawn', '/img/chess_piece_white_pawn_T.png');
     game.load.image('rook', '/img/chess_piece_white_rook_T.png');
+    game.load.image('knight', '/img/chess_piece_white_knight_T.png');
     
 }
 
@@ -44,6 +45,16 @@ function create() {
         rook = game.add.sprite(k*525, 525, 'rook');
         rook.scale.setTo(0.15,0.15);
     }
+
+    //Adding Initial Knights
+        var knight = game.add.sprite(450, 0, 'knight');
+        knight.scale.setTo(0.15,0.15);
+        knight = game.add.sprite(75, 0, 'knight');
+        knight.scale.setTo(0.15,0.15);
+        knight = game.add.sprite(450, 525, 'knight');
+        knight.scale.setTo(0.15, 0.15);
+        knight = game.add.sprite(75, 525, 'knight');
+        knight.scale.setTo(0.15,0.15);
     
 
 }
